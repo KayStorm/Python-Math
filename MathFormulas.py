@@ -14,14 +14,14 @@ options['Subtraction'] = 'subtraction'
 options['Multiplication'] = 'multiplication'
 options['Division'] = 'division'
 
-def selectFromDict(options, name):
+def selectFromDict(options, optionName):
 
   optionsList = []
-  print('Select a Function:')
+  print('Select a Function: ')
 for optionName in options:
   index = 0
   index = index + 1
-  options.extend([options[optionName]])
+  options.extend(options[optionName])
   print(str(index) + optionName)
 inputValid = False
 while not inputValid:
