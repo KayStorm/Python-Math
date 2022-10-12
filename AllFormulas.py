@@ -74,3 +74,5 @@ revdivisionMessageFive = "the answer is: "
 revdivisionAnswer = lowNumber/highNumber
 
 print(revdivisionMessageOne, revdivisionMessageTwo, revdivisionMessageThree, revdivisionMessageFour, revdivisionMessageFive, revdivisionAnswer)
+
+print("Have a great day!")
