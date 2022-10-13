@@ -3,7 +3,6 @@
 
 import statistics
 
-
 userName = input('Who is this? ')
 print('Hi, ' + userName)
 print("Try this calculator!")
