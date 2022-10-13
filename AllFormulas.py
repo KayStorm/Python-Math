@@ -5,76 +5,88 @@ userName = input('Who is this? ')
 print('Hi, ' + userName)
 print("Try this calculator!")
 
-x, y = [float(x) for x in input("Enter two values: ").split()]
+print("I can do two sets of computations!")
+print("Option a: If you give me two numbers, I can add, subtract, multiple and divide them for you.")
+print("Option b: If you give me a list of numbers I can help you find mean, median, and mode")
 
-#print("Enter numbers with a space between each: ")
-#numberList = list(map(float, input().split()))
+calChoice = input("Please select which option you want to try by entering a or b: ")
 
-#addition
-print("   ~~Addition~~")
+if calChoice == "a" :
 
-additionMessageOne = "If you add "
-additionMessageTwo = x
-additionMessageThree = "by "
-additionMessageFour = y
-additionMessageFive = "the answer is: "
-additionAnswer = x + y
+  x, y = [float(x) for x in input("Enter two values: ").split()]
 
-print(additionMessageOne, additionMessageTwo, additionMessageThree, additionMessageFour, additionMessageFive, additionAnswer)
+  #addition
+  print("   ~~Addition~~")
 
-#subtraction
-print("   ~~Subtraction~~")
+  additionMessageOne = "If you add "
+  additionMessageTwo = x
+  additionMessageThree = "by "
+  additionMessageFour = y
+  additionMessageFive = "the answer is: "
+  additionAnswer = x + y
 
-subtractionMessageOne = "If you subtract "
-subtractionMessageTwo = x
-subtractionMessageThree = "by "
-subtractionMessageFour = y
-subtractionMessageFive = "the answer is: "
-subtractionAnswer = x - y
+  print(additionMessageOne, additionMessageTwo, additionMessageThree, additionMessageFour, additionMessageFive, additionAnswer)
 
-print(subtractionMessageOne, subtractionMessageTwo, subtractionMessageThree, subtractionMessageFour, subtractionMessageFive, subtractionAnswer)
+  #subtraction
+  print("   ~~Subtraction~~")
 
-revsubtractionMessageOne = "If you subtract "
-revsubtractionMessageTwo = y
-revsubtractionMessageThree = "by "
-revsubtractionMessageFour = x
-revsubtractionMessageFive = "the answer is: "
-revsubtractionAnswer = y - x
+  subtractionMessageOne = "If you subtract "
+  subtractionMessageTwo = x
+  subtractionMessageThree = "by "
+  subtractionMessageFour = y
+  subtractionMessageFive = "the answer is: "
+  subtractionAnswer = x - y
 
-print(revsubtractionMessageOne, revsubtractionMessageTwo, revsubtractionMessageThree, revsubtractionMessageFour, revsubtractionMessageFive, revsubtractionAnswer)
+  print(subtractionMessageOne, subtractionMessageTwo, subtractionMessageThree, subtractionMessageFour, subtractionMessageFive, subtractionAnswer)
 
-#multiply
-print("   ~~Multiplication~~")
+  revsubtractionMessageOne = "If you subtract "
+  revsubtractionMessageTwo = y
+  revsubtractionMessageThree = "by "
+  revsubtractionMessageFour = x
+  revsubtractionMessageFive = "the answer is: "
+  revsubtractionAnswer = y - x
 
-multiplicationMessageOne = "If you multiply "
-multiplicationMessageTwo = x
-multiplicationMessageThree = "by "
-multiplicationMessageFour = y
-multiplicationMessageFive = "the answer is: "
-multiplicationAnswer = x * y
+  print(revsubtractionMessageOne, revsubtractionMessageTwo, revsubtractionMessageThree, revsubtractionMessageFour, revsubtractionMessageFive, revsubtractionAnswer)
 
-print(multiplicationMessageOne, multiplicationMessageTwo, multiplicationMessageThree, multiplicationMessageFour, multiplicationMessageFive, multiplicationAnswer)
+  #multiply
+  print("   ~~Multiplication~~")
 
-#division
-print("   ~~Division~~")
+  multiplicationMessageOne = "If you multiply "
+  multiplicationMessageTwo = x
+  multiplicationMessageThree = "by "
+  multiplicationMessageFour = y
+  multiplicationMessageFive = "the answer is: "
+  multiplicationAnswer = x * y
 
-divisionMessageOne = "If you divide "
-divisionMessageTwo = x
-divisionMessageThree = "by "
-divisionMessageFour = y
-divisionMessageFive = "the answer is: "
-divisionAnswer = x/y
+  print(multiplicationMessageOne, multiplicationMessageTwo, multiplicationMessageThree, multiplicationMessageFour, multiplicationMessageFive, multiplicationAnswer)
 
-print(divisionMessageOne, divisionMessageTwo, divisionMessageThree, divisionMessageFour, divisionMessageFive, divisionAnswer)
+  #division
+  print("   ~~Division~~")
 
-#reverse division
-revdivisionMessageOne = "If you divide "
-revdivisionMessageTwo = y
-revdivisionMessageThree = "by "
-revdivisionMessageFour = x
-revdivisionMessageFive = "the answer is: "
-revdivisionAnswer = y/x
+  divisionMessageOne = "If you divide "
+  divisionMessageTwo = x
+  divisionMessageThree = "by "
+  divisionMessageFour = y
+  divisionMessageFive = "the answer is: "
+  divisionAnswer = x/y
 
-print(revdivisionMessageOne, revdivisionMessageTwo, revdivisionMessageThree, revdivisionMessageFour, revdivisionMessageFive, revdivisionAnswer)
+  print(divisionMessageOne, divisionMessageTwo, divisionMessageThree, divisionMessageFour, divisionMessageFive, divisionAnswer)
 
-print("Have a great day!")
+  #reverse division
+  revdivisionMessageOne = "If you divide "
+  revdivisionMessageTwo = y
+  revdivisionMessageThree = "by "
+  revdivisionMessageFour = x
+  revdivisionMessageFive = "the answer is: "
+  revdivisionAnswer = y/x
+
+  print(revdivisionMessageOne, revdivisionMessageTwo, revdivisionMessageThree, revdivisionMessageFour, revdivisionMessageFive, revdivisionAnswer)
+
+  print("Have a great day!")
+
+else:
+  print("Enter numbers in any order with just a space between: ")
+  numList = list(map(float, input().split()))
+  numList.sort()
+  print("After sorting:")
+  print(*numList)
