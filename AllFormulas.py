@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 #!/usr/bin/python
 
+import statistics
+
+
 userName = input('Who is this? ')
 print('Hi, ' + userName)
 print("Try this calculator!")
@@ -88,5 +91,18 @@ else:
   print("Enter numbers in any order with just a space between: ")
   numList = list(map(float, input().split()))
   numList.sort()
-  print("After sorting:")
+  print("   ~~Ordered List~~")
   print(*numList)
+
+  print("   ~~Mean~~")
+  print(statistics.mean(numList))
+
+  print("   ~~Median~~")
+  print(statistics.median(numList))
+
+  print("   ~~Mode~~")
+  mode = statistics.mode(numList)
+  if mode == min(numList):
+    print("All numbers are unique. No mode.")
+  else:
+    print(mode)
