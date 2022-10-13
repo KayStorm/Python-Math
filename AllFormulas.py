@@ -5,18 +5,20 @@ userName = input('Who is this? ')
 print('Hi, ' + userName)
 print("Try this calculator!")
 
-highNumber = float(input('What is the bigger number in the problem? '))
-lowNumber = float(input('What is the lower number in the problem? '))
+x, y = [float(x) for x in input("Enter two values: ").split()]
+
+#print("Enter numbers with a space between each: ")
+#numberList = list(map(float, input().split()))
 
 #addition
 print("   ~~Addition~~")
 
 additionMessageOne = "If you add "
-additionMessageTwo = highNumber
+additionMessageTwo = x
 additionMessageThree = "by "
-additionMessageFour = lowNumber
+additionMessageFour = y
 additionMessageFive = "the answer is: "
-additionAnswer = highNumber + lowNumber
+additionAnswer = x + y
 
 print(additionMessageOne, additionMessageTwo, additionMessageThree, additionMessageFour, additionMessageFive, additionAnswer)
 
@@ -24,20 +26,20 @@ print(additionMessageOne, additionMessageTwo, additionMessageThree, additionMess
 print("   ~~Subtraction~~")
 
 subtractionMessageOne = "If you subtract "
-subtractionMessageTwo = highNumber
+subtractionMessageTwo = x
 subtractionMessageThree = "by "
-subtractionMessageFour = lowNumber
+subtractionMessageFour = y
 subtractionMessageFive = "the answer is: "
-subtractionAnswer = highNumber - lowNumber
+subtractionAnswer = x - y
 
 print(subtractionMessageOne, subtractionMessageTwo, subtractionMessageThree, subtractionMessageFour, subtractionMessageFive, subtractionAnswer)
 
 revsubtractionMessageOne = "If you subtract "
-revsubtractionMessageTwo = lowNumber
+revsubtractionMessageTwo = y
 revsubtractionMessageThree = "by "
-revsubtractionMessageFour = highNumber
+revsubtractionMessageFour = x
 revsubtractionMessageFive = "the answer is: "
-revsubtractionAnswer = lowNumber - highNumber
+revsubtractionAnswer = y - x
 
 print(revsubtractionMessageOne, revsubtractionMessageTwo, revsubtractionMessageThree, revsubtractionMessageFour, revsubtractionMessageFive, revsubtractionAnswer)
 
@@ -45,11 +47,11 @@ print(revsubtractionMessageOne, revsubtractionMessageTwo, revsubtractionMessageT
 print("   ~~Multiplication~~")
 
 multiplicationMessageOne = "If you multiply "
-multiplicationMessageTwo = highNumber
+multiplicationMessageTwo = x
 multiplicationMessageThree = "by "
-multiplicationMessageFour = lowNumber
+multiplicationMessageFour = y
 multiplicationMessageFive = "the answer is: "
-multiplicationAnswer = highNumber * lowNumber
+multiplicationAnswer = x * y
 
 print(multiplicationMessageOne, multiplicationMessageTwo, multiplicationMessageThree, multiplicationMessageFour, multiplicationMessageFive, multiplicationAnswer)
 
@@ -57,21 +59,21 @@ print(multiplicationMessageOne, multiplicationMessageTwo, multiplicationMessageT
 print("   ~~Division~~")
 
 divisionMessageOne = "If you divide "
-divisionMessageTwo = highNumber
+divisionMessageTwo = x
 divisionMessageThree = "by "
-divisionMessageFour = lowNumber
+divisionMessageFour = y
 divisionMessageFive = "the answer is: "
-divisionAnswer = highNumber/lowNumber
+divisionAnswer = x/y
 
 print(divisionMessageOne, divisionMessageTwo, divisionMessageThree, divisionMessageFour, divisionMessageFive, divisionAnswer)
 
 #reverse division
 revdivisionMessageOne = "If you divide "
-revdivisionMessageTwo = lowNumber
+revdivisionMessageTwo = y
 revdivisionMessageThree = "by "
-revdivisionMessageFour = highNumber
+revdivisionMessageFour = x
 revdivisionMessageFive = "the answer is: "
-revdivisionAnswer = lowNumber/highNumber
+revdivisionAnswer = y/x
 
 print(revdivisionMessageOne, revdivisionMessageTwo, revdivisionMessageThree, revdivisionMessageFour, revdivisionMessageFive, revdivisionAnswer)
 
