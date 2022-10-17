@@ -105,3 +105,6 @@ else:
     print("All numbers are unique. No mode.")
   else:
     print(mode)
+
+  print("   ~~Range~~")
+  print(max(numList) - min(numList))
