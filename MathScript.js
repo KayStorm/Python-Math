@@ -133,28 +133,71 @@ if (calChoice == "a") {
 	console.log("Have a great day!");
 } else {
 	var groupLength = prompt("How many numbers do you need to work with?");
-	console.log("This function still in production mode. Try again later.");
-	//console.log("Enter numbers in any order with just a space between: ");
 
-	//let numList = list(map(float, input().split()));
-	//numList.sort();
+	var numInputs = prompt(
+		"Enter your values, seperated by a single space: "
+	).split(" ");
+	console.log("The numbers you entered are: " + numInputs);
 
-	//console.log("   ~~Ordered List~~");
-	//console.log(*numList);
+	var numList = numInputs.map(Number);
 
-	//console.log("   ~~Mean~~");
-	//console.log(statistics.mean(numList));
+	console.log("   ~~Ordered List~~");
+	console.log(numList.sort());
 
-	//console.log("   ~~Median~~");
-	//console.log(statistics.median(numList));
+	console.log("   ~~Mean~~");
+	let mean = (numList) => {
+		let total = 0;
+		for (let i = 0; i < numList.length; i++) {
+			total += numList[i];
+		}
+		return total / numList.length;
+	};
+	console.log(mean);
 
-	//console.log("   ~~Mode~~");
-	//let mode = statistics.mode(numList);
-	//  if (mode == min(numList)) {
-	//  console.log("All numbers are unique. No mode.");
-	//  } else {
-	//  console.log(mode);}
+	console.log("   ~~Median~~");
+	const median = (numList) => {
+		const { length } = numList;
 
-	//console.log("   ~~Range~~");
-	//console.log(max(numList) - min(numList));
+		numList.sort((a, b) => a - b);
+
+		if (length % 2 === 0) {
+			return (numList[length / 2 - 1] + numList[length / 2]) / 2;
+		}
+
+		return numList[(length - 1) / 2];
+	};
+	console.log(median);
+
+	console.log("   ~~Mode~~");
+	const mode = (numList) => {
+		const mode = {};
+		let max = 0,
+			count = 0;
+
+		for (let i = 0; i < numList.length; i++) {
+			const item = numList[i];
+
+			if (mode[item]) {
+				mode[item]++;
+			} else {
+				mode[item] = 1;
+			}
+
+			if (count < mode[item]) {
+				max = item;
+				count = mode[item];
+			}
+		}
+
+		return max;
+	};
+	console.log(mode);
+
+	console.log("   ~~Range~~");
+	const range = (numList) => {
+		numList.sort((a, b) => a - b);
+
+		return [numList[0], numList[numList.length - 1]];
+	};
+	console.log(range);
 }
