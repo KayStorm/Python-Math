@@ -139,14 +139,14 @@ if (calChoice == "a") {
 	).split(" ");
 	console.log("The numbers you entered are: " + numInputs);
 
-	var numList = numInputs.map(Number);
+	var numList = parseFloat(numInputs);
 
-	console.log("   ~~Ordered List~~");
-	console.log(numList.sort());
+	//console.log("   ~~Ordered List~~");
+	//console.log(numList.sort());
 
 	console.log("   ~~Minimum & Maximum~~");
-	console.log("The smallest number is: " + Math.min(numList));
-	console.log("The largest number is: " + Math.max(numList));
+	console.log("The smallest number is: " + numList.MIN_VALUE);
+	console.log("The largest number is: " + numList.MAX_VALUE);
 
 	console.log("   ~~Mean~~");
 	let mean = (numList) => {
