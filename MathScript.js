@@ -144,6 +144,10 @@ if (calChoice == "a") {
 	console.log("   ~~Ordered List~~");
 	console.log(numList.sort());
 
+	console.log("   ~~Minimum & Maximum~~");
+	console.log("The smallest number is: " + Math.min(numList));
+	console.log("The largest number is: " + Math.max(numList));
+
 	console.log("   ~~Mean~~");
 	let mean = (numList) => {
 		let total = 0;
