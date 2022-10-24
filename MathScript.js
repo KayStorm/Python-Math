@@ -132,37 +132,33 @@ if (calChoice == "a") {
 
 	console.log("Have a great day!");
 } else {
-	//var groupLength = prompt("How many numbers do you need to work with?");
-
-	//var numInputs = prompt("Enter your values, seperated by a single space: ").split(" ");
-	//console.log("The numbers you entered are: " + numInputs);
-
-	//Testing input success
-	//var numList = parseFloat(numInputs);
-
 	var groupLength = prompt("How many numbers do you need to work with?");
 	var numList = [];
-
 	for (var a = 0; a < groupLength; a++) {
 		numList[a] = prompt("Enter a value: " + (a + 1));
 	}
 
+	//working sort
 	console.log("   ~~Ordered List~~");
 	console.log(numList.sort());
 
+	//working min/max
 	console.log("   ~~Minimum & Maximum~~");
 	console.log("The smallest number is: " + Math.min.apply(Math, numList));
 	console.log("The largest number is: " + Math.max.apply(Math, numList));
 
+	//not working mean
 	console.log("   ~~Mean~~");
-	let mean = (numList) => {
-		let total = 0;
-		for (let i = 0; i < numList.length; i++) {
-			total += numList[i];
-		}
-		return total / numList.length;
-	};
-	console.log(mean);
+	function meanCalc() {
+		let mean = (numList) => {
+			let total = 0;
+			for (let i = 0; i < numList.length; i++) {
+				total += numList[i];
+			}
+			return total / numList.length;
+		};
+		console.log(meanCalc(numList));
+	}
 
 	console.log("   ~~Median~~");
 	const median = (numList) => {
