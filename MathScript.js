@@ -132,17 +132,26 @@ if (calChoice == "a") {
 
 	console.log("Have a great day!");
 } else {
+	//var groupLength = prompt("How many numbers do you need to work with?");
+
+	//var numInputs = prompt("Enter your values, seperated by a single space: ").split(" ");
+	//console.log("The numbers you entered are: " + numInputs);
+
+	//Testing input success
+	//var numList = parseFloat(numInputs);
+
 	var groupLength = prompt("How many numbers do you need to work with?");
+	var numList = [];
 
-	var numInputs = prompt(
-		"Enter your values, seperated by a single space: "
-	).split(" ");
-	console.log("The numbers you entered are: " + numInputs);
+	for (var a = 0; a < groupLength; a++) {
+		numList[a] = prompt("Enter a value: " + (a + 1));
+	}
 
-	var numList = parseFloat(numInputs);
+	console.log(doubled);
+	console.log(typeof doubled);
 
-	//console.log("   ~~Ordered List~~");
-	//console.log(numList.sort());
+	console.log("   ~~Ordered List~~");
+	console.log(numList.sort());
 
 	console.log("   ~~Minimum & Maximum~~");
 	console.log("The smallest number is: " + numList.MIN_VALUE);
