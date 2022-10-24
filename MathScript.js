@@ -147,15 +147,12 @@ if (calChoice == "a") {
 		numList[a] = prompt("Enter a value: " + (a + 1));
 	}
 
-	console.log(doubled);
-	console.log(typeof doubled);
-
 	console.log("   ~~Ordered List~~");
 	console.log(numList.sort());
 
 	console.log("   ~~Minimum & Maximum~~");
-	console.log("The smallest number is: " + numList.MIN_VALUE);
-	console.log("The largest number is: " + numList.MAX_VALUE);
+	console.log("The smallest number is: " + Math.min.apply(Math, numList));
+	console.log("The largest number is: " + Math.max.apply(Math, numList));
 
 	console.log("   ~~Mean~~");
 	let mean = (numList) => {
