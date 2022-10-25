@@ -133,10 +133,12 @@ if (calChoice == "a") {
 	console.log("Have a great day!");
 } else {
 	var groupLength = prompt("How many numbers do you need to work with?");
-	var numList = [];
+	var stringList = [];
 	for (var a = 0; a < groupLength; a++) {
-		numList[a] = prompt("Enter a value: " + (a + 1));
+		stringList[a] = prompt("Enter a value: " + (a + 1));
 	}
+
+	var numList = stringList.map(Number);
 
 	//working sort
 	console.log("   ~~Ordered List~~");
@@ -148,18 +150,31 @@ if (calChoice == "a") {
 	console.log("The largest number is: " + Math.max.apply(Math, numList));
 
 	//not working mean
-	console.log("   ~~Mean~~");
+
 	function meanCalc() {
-		let mean = (numList) => {
-			let total = 0;
-			for (let i = 0; i < numList.length; i++) {
-				total += numList[i];
-			}
-			return total / numList.length;
-		};
-		console.log(meanCalc(numList));
+		//let mean = (numList) => {
+		//	let total = 0;
+		//	for (let i = 0; i < numList.length; i++) {
+		//		total += numList[i];
+		//	}
+		//	return total / numList.length;
+
+		const initialValue = 0;
+		const sumWithInitial = numList.reduce(
+			(previousValue, currentValue) => previousValue + currentValue,
+			initialValue
+		);
+
+		const mean = sumWithInitial / numList.length;
+
+		console.log("   ~~Sum~~");
+		console.log("The sum of the entered numbers: " + sumWithInitial);
+
+		console.log("   ~~Mean~~");
+		console.log(mean);
 	}
 
+	//not working median
 	console.log("   ~~Median~~");
 	const median = (numList) => {
 		const { length } = numList;
@@ -174,6 +189,7 @@ if (calChoice == "a") {
 	};
 	console.log(median);
 
+	//not working mode
 	console.log("   ~~Mode~~");
 	const mode = (numList) => {
 		const mode = {};
@@ -199,6 +215,7 @@ if (calChoice == "a") {
 	};
 	console.log(mode);
 
+	//not working range
 	console.log("   ~~Range~~");
 	const range = (numList) => {
 		numList.sort((a, b) => a - b);
