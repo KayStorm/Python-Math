@@ -139,6 +139,8 @@ if (calChoice == "a") {
 	}
 
 	var numList = stringList.map(Number);
+	//check type change
+	//console.log(typeof numList[2]);
 
 	//working sort
 	console.log("   ~~Ordered List~~");
@@ -149,7 +151,7 @@ if (calChoice == "a") {
 	console.log("The smallest number is: " + Math.min.apply(Math, numList));
 	console.log("The largest number is: " + Math.max.apply(Math, numList));
 
-	//not working mean
+	//working mean
 
 	function meanCalc() {
 		//let mean = (numList) => {
@@ -165,14 +167,15 @@ if (calChoice == "a") {
 			initialValue
 		);
 
-		const mean = sumWithInitial / numList.length;
-
 		console.log("   ~~Sum~~");
-		console.log("The sum of the entered numbers: " + sumWithInitial);
+		console.log(sumWithInitial);
+
+		const mean = sumWithInitial / numList.length;
 
 		console.log("   ~~Mean~~");
 		console.log(mean);
 	}
+	console.log(meanCalc(numList));
 
 	//not working median
 	console.log("   ~~Median~~");
