@@ -144,7 +144,8 @@ if (calChoice == "a") {
 
 	//working sort
 	console.log("   ~~Ordered List~~");
-	console.log(numList.sort());
+	const sortCalc = numList.sort();
+	console.log(sortCalc);
 
 	//working min/max
 	console.log("   ~~Minimum & Maximum~~");
@@ -154,13 +155,6 @@ if (calChoice == "a") {
 	//working mean
 
 	function meanCalc() {
-		//let mean = (numList) => {
-		//	let total = 0;
-		//	for (let i = 0; i < numList.length; i++) {
-		//		total += numList[i];
-		//	}
-		//	return total / numList.length;
-
 		const initialValue = 0;
 		const sumWithInitial = numList.reduce(
 			(previousValue, currentValue) => previousValue + currentValue,
@@ -179,18 +173,19 @@ if (calChoice == "a") {
 
 	//not working median
 	console.log("   ~~Median~~");
-	const median = (numList) => {
-		const { length } = numList;
 
-		numList.sort((a, b) => a - b);
+	//function medianCalc () {
+	console.log("There are " + groupLength + " numbers in your list.");
 
-		if (length % 2 === 0) {
-			return (numList[length / 2 - 1] + numList[length / 2]) / 2;
-		}
+	if (groupLength % 2 === 0) {
+		console.log("That means your list is even.");
+	} else {
+		console.log("That means your list is odd.");
+	}
 
-		return numList[(length - 1) / 2];
-	};
-	console.log(median);
+	//}
+
+	//console.log(medianCalc);
 
 	//not working mode
 	console.log("   ~~Mode~~");
