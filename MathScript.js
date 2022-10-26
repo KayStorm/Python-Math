@@ -171,7 +171,7 @@ if (calChoice == "a") {
 	}
 	console.log(meanCalc(numList));
 
-	//not working median
+	//half working median
 	console.log("   ~~Median~~");
 
 	//function medianCalc () {
@@ -179,8 +179,12 @@ if (calChoice == "a") {
 
 	if (groupLength % 2 === 0) {
 		console.log("That means your list is even.");
+		var middleEven = numList[Math.floor((numList.length - 1) / 2)];
+		console.log("The middle number is " + middleEven);
 	} else {
 		console.log("That means your list is odd.");
+		var middleOdd = numList[Math.floor(numList.length / 2)];
+		console.log("The middle number is " + middleOdd);
 	}
 
 	//}
