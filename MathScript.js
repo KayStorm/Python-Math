@@ -191,38 +191,35 @@ if (calChoice == "a") {
 
 	//console.log(medianCalc);
 
-	//not working mode
+	//almost working mode
 	console.log("   ~~Mode~~");
-	const mode = (numList) => {
-		const mode = {};
-		let max = 0,
-			count = 0;
+	console.log("Oops! Still working on that!")
+	//const mode = (numList) => {
+	//	const mode = {};
+	//	let max = 0,
+	//		count = 0;
 
-		for (let i = 0; i < numList.length; i++) {
-			const item = numList[i];
+	//	for (let i = 0; i < numList.length; i++) {
+	//		const item = numList[i];
 
-			if (mode[item]) {
-				mode[item]++;
-			} else {
-				mode[item] = 1;
-			}
+	//		if (mode[item]) {
+	//			mode[item]++;
+	//		} else {
+	//			mode[item] = 1;
+	//		}
 
-			if (count < mode[item]) {
-				max = item;
-				count = mode[item];
-			}
-		}
+	//		if (count < mode[item]) {
+	//			max = item;
+	//			count = mode[item];
+	//		}
+	//	}
 
-		return max;
-	};
-	console.log(mode);
+	//	return max;
+	//};
+	//console.log(mode);
 
 	//not working range
 	console.log("   ~~Range~~");
-	const range = (numList) => {
-		numList.sort((a, b) => a - b);
-
-		return [numList[0], numList[numList.length - 1]];
-	};
+	const range = Math.max.apply(Math, numList) - Math.min.apply(Math, numList)
 	console.log(range);
-}
+
