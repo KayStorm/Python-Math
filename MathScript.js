@@ -193,33 +193,33 @@ if (calChoice == "a") {
 
 	//almost working mode
 	console.log("   ~~Mode~~");
-	console.log("Oops! Still working on that!")
-	//const mode = (numList) => {
-	//	const mode = {};
-	//	let max = 0,
-	//		count = 0;
 
-	//	for (let i = 0; i < numList.length; i++) {
-	//		const item = numList[i];
+	function modeCalc(numList) {
+		var frequency = []; // array of frequency.
+		var maxFreq = 0; // holds the max frequency.
+		var modes = [];
+	
+		for (var i in numList) {
+			frequency[numList[i]] = (frequency[numList[i]] || 0) + 1; // increment frequency.
+	
+			if (frequency[numList[i]] > maxFreq) { // is this frequency > max so far ?
+				maxFreq = frequency[numList[i]]; // update max.
+			}
+		}
+	
+		for (var k in frequency) {
+			if (frequency[k] == maxFreq) {
+				modes.push(k);
+			}
+		}
+	
+		return modes;
+	}
+	
+	console.log(modeCalc(numList));
 
-	//		if (mode[item]) {
-	//			mode[item]++;
-	//		} else {
-	//			mode[item] = 1;
-	//		}
-
-	//		if (count < mode[item]) {
-	//			max = item;
-	//			count = mode[item];
-	//		}
-	//	}
-
-	//	return max;
-	//};
-	//console.log(mode);
-
-	//not working range
+	//working range
 	console.log("   ~~Range~~");
-	const range = Math.max.apply(Math, numList) - Math.min.apply(Math, numList)
+	const range = Math.max.apply(Math, numList) - Math.min.apply(Math, numList);
 	console.log(range);
 
