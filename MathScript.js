@@ -180,7 +180,7 @@ if (calChoice == "a") {
 	if (groupLength % 2 === 0) {
 		console.log("That means your list is even.");
 		var middleEven = numList[Math.floor((numList.length - 1) / 2)];
-		console.log("The middle number is " + middleEven);
+		console.log("The middle number is the one after " + middleEven);
 	} else {
 		console.log("That means your list is odd.");
 		var middleOdd = numList[Math.floor(numList.length / 2)];
